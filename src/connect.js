@@ -491,20 +491,6 @@ function Connect() {
     }
   }, [isConnected]);
 
-  useEffect(() => {
-    if (isConnected) {
-      if (data && Number(data) > 0) {
-        route(
-          "https://strugbitstech.wixsite.com/flat-for-flip-demo/home?redirect=true"
-        );
-      } else {
-        route(
-          "https://strugbitstech.wixsite.com/flat-for-flip-demo/nft-not-found?redirect=true"
-        );
-      }
-    }
-  }, [isConnected]);
-
   return (
     <div
       style={{
