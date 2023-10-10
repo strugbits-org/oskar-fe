@@ -7,7 +7,7 @@ import { mainnet } from "wagmi/chains";
 import { WalletConnectConnector } from "wagmi/connectors/walletConnect";
 import Connect from "./connect";
 
-const projectId = "8654d24dbf703daa6f712cc77648b5ad";
+const projectId = process.env.REACT_APP_PROJECT_ID;
 
 function App() {
   const { chains, publicClient } = configureChains(
