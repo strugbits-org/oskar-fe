@@ -114,7 +114,30 @@ function Connect() {
           </div>
         </>
       ) : (
-        <h1 style={{ fontSize: 27, color: "#A3A6C2" }}>Please Login First</h1>
+        <>
+          <h1 style={{ fontSize: 27, color: "#A3A6C2" }}>Please Login First</h1>
+          <button
+            style={{
+              background: "transparent",
+              border: "1px solid black",
+              fontSize: 20,
+              width: 200,
+              height: 45,
+              marginTop: 10,
+              backgroundColor: "#181A20",
+              color: "#fff",
+              borderRadius: 12,
+            }}
+          >
+            <a
+              href="https://play.google.com/store/apps/details?id=io.metamask&hl=en&gl=US&pli=1"
+              target="_playstore"
+              style={{ color: "#fff", textDecoration: "none" }}
+            >
+              Install Metamask
+            </a>
+          </button>
+        </>
       )}
     </div>
   );
