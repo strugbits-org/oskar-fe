@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useAccount, useConnect, useContractRead, useDisconnect } from "wagmi";
-import ABI from './contractABI'
+import ABI from "./contractABI";
 
 const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS;
 
@@ -37,9 +37,11 @@ function Connect() {
     }
   };
 
+  const connectWallet = () => connect({ connector: connectors[0] });
+
   useEffect(() => {
     if (!isConnected) {
-      connect({ connector: connectors[0] });
+      connectWallet();
     } else {
       if (isSuccess) {
         if (data && Number(data) > 0) {
@@ -51,6 +53,7 @@ function Connect() {
         }
       }
     }
+    // eslint-disable-next-line
   }, [isConnected]);
 
   return (
